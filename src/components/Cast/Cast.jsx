@@ -1,9 +1,9 @@
-import { ActorCard } from 'components/ActorCard/ActorCard';
+import { ActorCard } from 'components/CardOfActor/CardOfActor';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchActors } from 'utils/movies-api';
 import { ActorList } from './Cast.styled';
-import { Loader } from 'components/Loader/Loader';
+import { Loader } from 'components/Load/Load';
 
 export const Cast = () => {
   const [actorData, setActorData] = useState([]);

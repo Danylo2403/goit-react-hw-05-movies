@@ -4,11 +4,12 @@ import styled from 'styled-components';
 export const StyledInformationLayout = styled.ul`
   display: flex;
   gap: 12px;
-  flex-direction: column;
+  flex-direction: row; /* Змінено напрямок на горизонтальний */
   border: 1px solid #d7d4cd;
   margin: 40px 0;
   padding: 20px 48px;
   list-style: none;
+  justify-content: center; /* Розміщення елементів по центру */
 `;
 
 export const StyledNavLink = styled(NavLink)`

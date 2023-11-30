@@ -4,7 +4,7 @@ import {
   CardInfo,
   Character,
   Name,
-} from './ActorCard.styled';
+} from './CardOfActor.styled';
 
 export const ActorCard = ({
   photo = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ09uJRvSYTZguOy_L--3XALEwxqNIuvBvF8yJOHWNiew&s',

@@ -1,6 +1,6 @@
 import React from 'react';
-import { MovieCard } from 'components/MovieCard/MovieCard';
-import { StyledMoviesContainer } from './MoviesGallery.styled';
+import { MovieCard } from 'components/CardOfMovie/CardOfMovie';
+import { StyledMoviesContainer } from './GalleryOfMovies.styled';
 
 export const MoviesGallery = ({ movies }) => {
   return (

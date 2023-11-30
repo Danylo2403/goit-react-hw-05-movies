@@ -1,6 +1,6 @@
 import {
   ReviewItemWrapper, Author, Text
-} from 'components/ReviewItem/ReviewItem.styled';
+} from 'components/ItemReview/ItemReview.styled';
 
 export const ReviewItem = ({ author, text }) => {
   return (

@@ -11,7 +11,8 @@ import {
   StyledBackLink,
 } from './MovieDetails.styled';
 import { Information } from 'components/Information/Information';
-import { Loader } from 'components/Loader/Loader';
+import { Loader } from 'components/Load/Load';
+import { MdOutlineBackHand } from "react-icons/md";
 
 export default function MovieDetails() {
   const { movieId } = useParams();
@@ -42,7 +43,7 @@ export default function MovieDetails() {
       {movie && (
         <>
           <StyledBackLink to={prevPage.current.state?.from ?? '/'}>
-            <span>&lArr; Go back</span>
+            <span>Go back <MdOutlineBackHand /></span>
           </StyledBackLink>
           <MovieLayout>
             <img

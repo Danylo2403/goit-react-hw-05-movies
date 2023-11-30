@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { fetchMoviesByQuery } from 'utils/movies-api';
 import { SearchBar } from 'components/SearchBar/SearchBar';
-import { MoviesGallery } from 'components/MoviesGallery/MoviesGallery';
-import { Loader } from 'components/Loader/Loader';
+import { MoviesGallery } from 'components/GalleryOfMovies/GalleryOfMovies';
+import { Loader } from 'components/Load/Load';
 
-export default function Movies() {
+const Movies = () => {
   const [movies, setMovies] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [params] = useSearchParams();
@@ -13,12 +13,9 @@ export default function Movies() {
   const query = params.get('query') ?? '';
 
   useEffect(() => {
-    if (query === '') {
-      return;
-    }
-
-    async function getMoviesByQuery() {
+    const getMoviesByQuery = async () => {
       setIsLoading(true);
+
       try {
         const fetchedMovies = await fetchMoviesByQuery(query);
         setMovies(fetchedMovies);
@@ -27,9 +24,11 @@ export default function Movies() {
       } finally {
         setIsLoading(false);
       }
-    }
+    };
 
-    getMoviesByQuery();
+    if (query !== '') {
+      getMoviesByQuery();
+    }
   }, [query]);
 
   return (
@@ -39,4 +38,6 @@ export default function Movies() {
       {isLoading && <Loader />}
     </section>
   );
-}
+};
+
+export default Movies;

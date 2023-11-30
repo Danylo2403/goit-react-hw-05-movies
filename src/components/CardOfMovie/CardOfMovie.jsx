@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { StyledCardInfo, StyledMovieItem, StyledMovieItemImage, StyledLink } from './MovieCard.styled';
+import { StyledCardInfo, StyledMovieItem, StyledMovieItemImage, StyledLink } from './CardOfMovie.styled';
 
 export const MovieCard = ({ id, title, poster }) => {
   const location = useLocation();

@@ -29,7 +29,7 @@ export const StyledCardInfo = styled.div`
   align-self: center;
   align-items: center;
   font-size: 18px;
-  font-weight: bold; /* Додаємо жирність */
+  font-weight: bold; 
   padding: 15px;
   height: 79px;
   color: #333;

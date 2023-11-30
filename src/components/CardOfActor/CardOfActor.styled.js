@@ -6,13 +6,14 @@ export const Card = styled.li`
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: #f8f8f8; 
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
 
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff; 
   }
 `;
 
@@ -32,13 +33,13 @@ export const CardInfo = styled.div`
 `;
 
 export const Name = styled.p`
-  font-size: 18px;
+  font-size: 20px; 
   font-weight: 700;
   margin-bottom: 10px;
   color: #333;
 `;
 
 export const Character = styled.p`
-  font-size: 14px;
+  font-size: 16px; 
   color: #666;
 `;

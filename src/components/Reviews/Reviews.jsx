@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchReviews } from 'utils/movies-api';
-import { ReviewItem } from 'components/ReviewItem/ReviewItem';
-import { Loader } from 'components/Loader/Loader';
+import { ReviewItem } from 'components/ItemReview/ItemReview';
+import { Loader } from 'components/Load/Load';
 
 export const Reviews = () => {
   const [isLoading, setIsLoading] = useState(false);

@@ -1,16 +1,15 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { fetchTrendingMovies } from '../../utils/movies-api';
-
-import { MoviesGallery } from 'components/MoviesGallery/MoviesGallery';
+import { MoviesGallery } from 'components/GalleryOfMovies/GalleryOfMovies';
 import { PageTitle } from './Home.styled';
-import { Loader } from 'components/Loader/Loader';
+import { Loader } from 'components/Load/Load';
 
-export default function Home() {
+const Home = () => {
   const [trendingMovies, setTrendingMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    async function getMovies() {
+    const getMovies = async () => {
       setIsLoading(true);
 
       try {
@@ -21,7 +20,8 @@ export default function Home() {
       } finally {
         setIsLoading(false);
       }
-    }
+    };
+
     getMovies();
   }, []);
 
@@ -32,4 +32,6 @@ export default function Home() {
       {isLoading && <Loader />}
     </div>
   );
-}
+};
+
+export default Home;

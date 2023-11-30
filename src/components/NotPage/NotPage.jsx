@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { StyledWrapper, StyledLabel, StyledTitle, StyledText, StyledButton } from './NotFoundPage.styled';
+import { StyledWrapper, StyledLabel, StyledTitle, StyledText, StyledButton } from './NotPage.styled';
 
 export const NotFoundTitle = () => {
   return (

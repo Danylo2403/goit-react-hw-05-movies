@@ -1,6 +1,6 @@
 // Header.jsx
 import React from 'react';
-import { StyledHeader, NavContainer, StyledLink } from './Header.styled';
+import { StyledHeader, NavContainer, StyledNavLink } from './Header.styled';
 
 export const Header = () => {
   return (
@@ -8,14 +8,10 @@ export const Header = () => {
       <nav>
         <NavContainer>
           <li>
-            <StyledLink to="/" activeClassName="active">
-              Home
-            </StyledLink>
+            <StyledNavLink to="/">Home</StyledNavLink>
           </li>
           <li>
-            <StyledLink to="/movies" activeClassName="active">
-              Movies
-            </StyledLink>
+            <StyledNavLink to="/movies">Movies</StyledNavLink>
           </li>
         </NavContainer>
       </nav>

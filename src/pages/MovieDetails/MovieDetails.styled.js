@@ -3,102 +3,73 @@ import styled from 'styled-components';
 
 export const MovieLayout = styled.div`
   display: flex;
-  margin: 0 auto;
+  justify-content: center; 
   gap: 24px;
+  margin: 0 auto;
 `;
 
 export const StyledBackLink = styled(Link)`
+  display: inline-block;
+  padding: 10px 20px;
   margin-bottom: 20px;
-  display: block;
-  line-height: 40px;
-  height: 40px;
-  text-align: center;
-  width: 100px;
-  cursor: pointer;
-  background-color: #7f2221;
-  color: #f3f3f3;
-  transition: all 0.3s;
-  position: relative;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: #4a90e2; 
   border-radius: 4px;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 
-  & span {
-    transition: all 0.3s;
+  &:hover {
+    background-color: #007acc; 
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   }
 
-  &::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    opacity: 0;
-    transition: all 0.3s;
-    border-top-width: 1px;
-    border-bottom-width: 1px;
-    border-top-style: solid;
-    border-bottom-style: solid;
-    border-top-color: rgba(255, 255, 255, 0.5);
-    border-bottom-color: rgba(255, 255, 255, 0.5);
-    transform: scale(0.1, 1);
-  }
-
-  & :hover span {
-    letter-spacing: 2px;
-  }
-
-  &:hover::before {
-    opacity: 1;
-    transform: scale(1, 1);
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    transition: all 0.3s;
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-
-  &:hover::after {
-    opacity: 0;
-    transform: scale(0.1, 1);
+  &:active {
+    transform: translateY(0);
+    box-shadow: none;
   }
 `;
 
 export const MovieTitle = styled.h2`
-  font-size: 48px;
+  font-family: 'Roboto', sans-serif; 
+  font-size: 2.5rem;
   font-weight: 600;
-  letter-spacing: 4px;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1rem;
 `;
 
 export const OverviewTitle = styled.h3`
+  font-family: 'Roboto', sans-serif; 
   font-weight: 400;
-  font-size: 24px;
-  margin-top: 40px;
-  margin-bottom: 24px;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
 `;
 
 export const Overview = styled.p`
-  font-size: 16px;
+  font-family: 'Roboto', sans-serif; 
+  font-size: 1rem;
   max-width: 500px;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 `;
 
 export const GenresTitle = styled.h3`
+  font-family: 'Roboto', sans-serif; 
   font-weight: 400;
-  font-size: 24px;
-  margin-bottom: 24px;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 `;
 
 export const Genres = styled.ul`
   padding-left: 20px;
-  list-style: unset;
+  list-style: none;
   display: flex;
-  gap: 32px;
+  gap: 2rem;
+
+  li {
+    font-family: 'Roboto', sans-serif; 
+    font-size: 1.2rem;
+  }
 `;
