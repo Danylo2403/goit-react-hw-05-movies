@@ -15,7 +15,7 @@ export const FireBackground = () => {
     <Particles
       options={{
         particles: {
-          color: { value: ['#ff0000', '#ff8c00', '#ffa500'] },
+          color: { value: ['#ff0000', '#f08503', '#ffa500'] },
           number: { value: 20 }, // Зменшено кількість зірок
           opacity: { min: 0.3, max: 1 },
           shape: {
