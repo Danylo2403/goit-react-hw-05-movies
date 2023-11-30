@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { fetchTrendingMovies } from '../../utils/movies-api';
 import { MoviesGallery } from 'components/GalleryOfMovies/GalleryOfMovies';
-import { PageTitle } from './Home.styled';
+import { PageTitle } from './HomePage.styled';
 import { Loader } from 'components/Load/Load';
 
 const Home = () => {

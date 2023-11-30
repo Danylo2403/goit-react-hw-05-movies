@@ -6,7 +6,7 @@ import { Reviews } from './Reviews/Reviews';
 import { NotFoundTitle } from './NotPage/NotPage';
 import { FireBackground  } from './Backround/Backround';
 
-const Home = lazy(() => import('pages/Home/Home'));
+const Home = lazy(() => import('pages/HomePage/HomePage'));
 const MovieDetails = lazy(() => import('pages/MovieDetails/MovieDetails'));
 const Movies = lazy(() => import('pages/Movies'));
 
