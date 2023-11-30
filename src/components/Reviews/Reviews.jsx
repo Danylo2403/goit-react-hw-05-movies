@@ -4,7 +4,7 @@ import { fetchReviews } from 'utils/movies-api';
 import { ReviewItem } from 'components/ItemReview/ItemReview';
 import { Loader } from 'components/Load/Load';
 
-export const Reviews = () => {
+export default function Reviews(){
   const [isLoading, setIsLoading] = useState(false);
   const [reviews, setReviews] = useState([]);
   const { movieId } = useParams();
@@ -17,7 +17,7 @@ export const Reviews = () => {
         const fetchedReviews = await fetchReviews(movieId);
         setReviews(fetchedReviews);
       } catch (error) {
-        console.error(error); // Обробка помилок у функції fetchReviews
+        console.error(error); 
       } finally {
         setIsLoading(false);
       }

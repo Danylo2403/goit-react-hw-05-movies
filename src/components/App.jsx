@@ -1,14 +1,17 @@
 import { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { SharedLayout } from './General/General';
-import { Cast } from './Cast/Cast';
-import { Reviews } from './Reviews/Reviews';
+// import { Cast } from './Cast/Cast';
+// import { Reviews } from './Reviews/Reviews';
 import { NotFoundTitle } from './NotPage/NotPage';
 import { FireBackground  } from './Backround/Backround';
+
 
 const Home = lazy(() => import('pages/HomePage/HomePage'));
 const MovieDetails = lazy(() => import('pages/MovieDetails/MovieDetails'));
 const Movies = lazy(() => import('pages/Movies'));
+const Cast = lazy(() => import('./Cast/Cast'));
+const Reviews = lazy(() => import('./Reviews/Reviews'));
 
 export const App = () => {
   return (
