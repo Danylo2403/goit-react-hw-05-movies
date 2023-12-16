@@ -35,7 +35,7 @@ export default function Reviews(){
           <ReviewItem key={id} author={author_details.username} text={content} />
         ))
       ) : (
-        <b>There are no reviews</b>
+        <b>There are no reviews.</b>
       )}
     </ul>
   );
